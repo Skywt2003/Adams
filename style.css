@@ -1,11 +1,11 @@
 @charset "utf-8";
 /*
-	Theme Name: Adams
-	Theme URL: https://biji.io
-	Description: Simple is beautiful
-	Author: Tokin
-	Author URI: https://biji.io
-	Version: 1.3.9
+  Theme Name: Adams
+  Theme URL: https://biji.io
+  Description: Simple is beautiful
+  Author: Tokin
+  Author URI: https://biji.io
+  Version: 1.3.8
 */
 /* Reset */
 html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
@@ -13,19 +13,22 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video,input,textarea,button { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
-body{background: #FFF;font:1rem/1.5  "Exo 2", "lucida grande", "lucida sans unicode", lucida, helvetica, "PingFang SC", "Hiragino Sans GB", "STHeiti Light", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;}
+body{background: #FFF;font:1rem/1.5  "lucida grande", "lucida sans unicode", lucida, helvetica, "PingFang SC", "Hiragino Sans GB", "STHeiti Light", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;}
 html,body{overflow-x:hidden;-webkit-overflow-scrolling: touch;-overflow-scrolling: touch;}
 html{height:100%;}
 ol, ul { list-style: none; }
 input,textarea,button {outline:none;-webkit-appearance:none;}
-blockquote,q {quotes:none;}
-blockquote:before,blockquote:after,q:before,q:after {content:none;}
-blockquote,q {background:#fafafa;margin:20px 0;padding:2.5rem 4rem;position:relative;word-wrap:break-word;}
-blockquote:before,q:before,blockquote:after,q:after{content:'“';color:#CCD1D9;font-size:6rem;position:absolute;top:1rem;left:1rem;font-family: "Arial",sans-serif;}
-blockquote:after,q:after{content:'”';top:initial;left:initial;bottom:-2rem;right:1rem;}
+blockquote,q {
+	/*font-family:Georgia,"Times New Roman",Times,Kai,"Kaiti SC",KaiTi,BiauKai,FontAwesome,serif;*/
+	color: rgba(0,0,0,.5);
+	padding-left:1.5em;
+	border-left:5px solid rgba(0,0,0,.1);
+	position:relative;
+	word-wrap:break-word;
+}
 blockquote p,q p{margin:0!important;padding:0;line-height:1.8rem;overflow:hidden;}
 pre{position:relative;white-space:pre-wrap;word-wrap:break-word;}
-pre code,code{display:block;overflow:auto;font-size:.88rem;max-height: 18rem;padding:2rem;-webkit-overflow-scrolling:touch;overflow-scrolling:touch;line-height:2rem;background:#3C3B3D;}
+pre code,code{display:block;overflow:auto;font-size:.88rem;padding:2rem;-webkit-overflow-scrolling:touch;overflow-scrolling:touch;line-height:2rem;background:#3C3B3D;}
 code{display:inline-block;margin:-.36rem 0;padding:0 .36rem;color:#AAB2BD;line-height:1.6rem;}
 
 /*! Color themes for Google Code Prettify | MIT License | github.com/jmblog/color-themes-for-google-code-prettify */
@@ -126,18 +129,18 @@ body { line-height: 1; background: #FFF; color:#656D78; -webkit-font-smoothing: 
 .infos .fixed-menus .menu{padding:0;margin:0;}
 /* Post List */
 .post-list .meta {font-size: 14px;line-height: 36px;position:relative;margin:8% 0 0;padding:8% 0 0}
-.post-list .meta:before{content:'';background:#434A54;width:80px;height:2px;position:absolute;top:0;left:-40px;}
+.post-list .meta:before{content:'';background:#e6e9ed;width:180px;height:1px;position:absolute;top:0;left:0;}
 .post-list .meta:first-child{padding:0}
 .post-list .meta:first-child:before{display:none;}
 .post-list .meta header h2{font-size: 1.4rem;line-height:1.4rem;color:#434A54;position:relative;display:inline-block;font-weight:bolder;}
 .post-list .meta header h2:hover{color:#3274ff;}
 .post-list .meta main {font-size:1rem;margin:2rem 0}
 .post-list .meta main .thumb{float:right;position:relative;margin:0 0 0 2%;width:180px;height:140px;border: 1px solid rgba(0,0,0,.05);background-color: #f0f0f0;background-position: 50%;background-size: cover;background-origin: border-box;}
-.post-list .meta main .thumb:after{content:'';position:absolute;top:8px;bottom:0;left:8px;right:0;width:10px;height:10px;border-radius:10px;background:#fff;
+/*.post-list .meta main .thumb:after{content:'';position:absolute;top:8px;bottom:0;left:8px;right:0;width:10px;height:10px;border-radius:10px;background:#fff;
 box-shadow:0 0 0 1px rgba(0, 0, 0, 0.2),
 0 112px 0 #fff,0 112px 0 1px rgba(0, 0, 0, 0.2),
 152px 112px 0 #fff,152px 112px 0 1px rgba(0, 0, 0, 0.2),
-152px 0 0 #fff,152px 0 0 1px rgba(0, 0, 0, 0.2);}
+152px 0 0 #fff,152px 0 0 1px rgba(0, 0, 0, 0.2);}*/
 .post-list .meta footer span{color:#AAB2BD;font-size:90%}
 .post-list .meta footer span.hr{display:inline-block;width:2px;height:2px;background:#AAB2BD;margin:4px 1rem;}
 
@@ -148,7 +151,7 @@ box-shadow:0 0 0 1px rgba(0, 0, 0, 0.2),
 .post-list .reade_more .page-numbers:hover,.post-list .reade_more span.page-numbers{background:#3274ff;}
 
 /* Connent */
-.post_article img {max-width:100%;display:block;margin:auto;height:auto;}
+.post_article img {max-width:100%;/*display:block;margin:auto;height:auto;*/}
 .post_article embed {max-width:100%;margin:10px auto;display:block;}
 .post_article a {text-decoration: underline;}
 .post_article p {margin:4% 0;line-height:2.4rem;}
@@ -160,7 +163,7 @@ box-shadow:0 0 0 1px rgba(0, 0, 0, 0.2),
 .post_article h4,#comments {font-size:1.2rem;line-height:1.2rem;}
 .post_article hr {border:0;display:block;margin: 5% 0;position:relative;text-align:center;letter-spacing: 2rem;}
 .post_article hr:before{content: '...';display: inline-block;position: relative;top: -.5rem;left:.8rem;font-size: 2rem;}
-.post_article ol,.post_article ul {margin:10px 0;padding:10px 40px;background:#fafafa;line-height:38px;}
+.post_article ol,.post_article ul {margin:10px 0;padding:10px 40px;line-height:38px;}
 .post_article ol li {list-style-type:decimal;}
 .post_article ul li {list-style-type:disc;}
 .post_article ol p,.post_article ul p{margin:0}
@@ -262,15 +265,16 @@ box-shadow:0 0 0 1px rgba(0, 0, 0, 0.2),
 
 /* Navigat */
 .navigation {text-align:center;overflow:hidden;margin:3% 0;}
-.navigation a{font-size:.8rem;margin:0 10px;}
-.navigation li{float:none;display:inline-block;margin:0;}
+.navigation a{font-size:.8rem;}
+.navigation .alignleft,.navigation .alignright{float:none;display:inline-block;margin:0;}
+.navigation .alignleft a,.navigation .alignright a{margin:0 10px;}
 
-.nearbypost{letter-spacing:-.8rem;padding:1rem 0;margin:7% 0;font-size:.96rem;box-shadow:0 1px 0 #E6E9ED,0 -1px 0 #E6E9ED;/* overflow: hidden; */}
+.nearbypost{letter-spacing:-.8rem;padding:1rem 0;margin:8% 0;font-size:.96rem;box-shadow:0 1px 0 #E6E9ED,0 -1px 0 #E6E9ED;/* overflow: hidden; */}
 .nearbypost div{float:none;margin:auto;display:inline-block;width:50%;letter-spacing:.06rem;line-height:1.08rem;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .nearbypost div a:before{content:'« '}
-.nearbypost div.alignright {box-shadow:-1px 0 0 #E6E9ED;text-align:right;padding: 0 1rem;}
+.nearbypost div.alignright {box-shadow:-1px 0 0 #E6E9ED;text-align:right;}
 .nearbypost div.alignright a:before {display:none;}
-.nearbypost div.alignright a:after {content:' »';position: absolute;right: 0;}
+.nearbypost div.alignright a:after {content:' »'}
 /* Footer */
 .footer {position:relative;z-index:9;line-height:2rem;font-size:.9rem;padding:0 0 1rem 0;border-top: 1px solid rgba(0, 0, 0, 0.08);box-shadow:0 -1px 0 rgba(255, 255, 255, 0.08);}
 .footer .right{float:right}
@@ -372,4 +376,54 @@ animation-fill-mode: forwards;
 @media (max-width:680px){
   .post-list .meta main .thumb{width:120px;height:100px;}
   .post-list .meta main .thumb:after,.infos.fixed .fields,.infos.fixed .fixed-menus,.header .social{display:none;}
+}
+
+/* 自定义的引用 */
+.myquote {
+	text-align: center;
+	padding: 30px 80px;
+	position: relative;
+	margin: 0;
+	border: none;
+}
+.myquote::before, .myquote::after {
+	color: #000;
+	position: absolute;
+	content: "\201c";
+	font-size: 45px;
+	font-family: 'Georgia', serif;
+	display: block;
+	top: 13px;
+	left: 30px;
+}
+.myquote::after {
+	content: "\201d";
+	top: auto;
+	left: auto;
+	right: 30px;
+	bottom: -5px;
+}
+.myquote cite {
+	position: relative;
+	display: inline-block;
+	padding: 0 20px;
+	font-size: 14px;
+	margin-top: 20px;
+}
+.myquote cite::before {
+	content: "";
+	background-color: #363b40;
+	width: 10px;
+	height: 1px;
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: 0;
+}
+
+.notice_box{
+    margin: 4% 0%;
+    padding: 5px 15px;
+    line-height: 2.4rem;
+    background: #eee;
 }

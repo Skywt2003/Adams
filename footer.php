@@ -9,9 +9,13 @@
         );?>
         <p>
             <span class='left'><?php echo '&copy; '.date('Y').' <a href="'.get_bloginfo('url').'">'.get_bloginfo('name').'</a>';
-                 if(get_option('zh_cn_l10n_icp_num')) echo " . " . get_option('zh_cn_l10n_icp_num');?></span>
-            <span class='right'>Theme by <a href="https://biji.io" target="_blank">Adams</a></span>
+                 if(get_option('zh_cn_l10n_icp_num')) echo " . " . get_option('zh_cn_l10n_icp_num');?>
+			</span>
+			<span class='right'>Powered by <a href="https://wordpress.org" target="_blank">WordPress</a> / Theme by <a href="https://biji.io" target="_blank">Adams</a></span>
         </p>
+		<span class='right'>
+			<script type="text/javascript" src="//ra.revolvermaps.com/0/0/3.js?i=06imda552rb&amp;b=0&amp;s=22&amp;m=0&amp;cl=ffffff&amp;co=010020&amp;cd=aa0000&amp;v0=60&amp;v1=60&amp;r=1" async="async"></script>
+		</span>
 	</section>
 </footer>
 
@@ -60,7 +64,7 @@
                 
                 $('ul.links li a').each(function(){
                     if($(this).parent().find('.bg').length==0){
-                        $(this).parent().append('<div class="bg" style="background-image:url(https://www.google.com/s2/favicons?domain='+$(this).attr("href")+')"></div>')
+                        $(this).parent().append('<div class="bg" style="background-image:url(https://www.google.cn/s2/favicons?domain='+$(this).attr("href")+')"></div>')
                     }
                 });
             }
@@ -74,7 +78,7 @@
         jQuery.adamsOverload();
         if (isInitialLoad === false) {
             // support MathJax
-            if (typeof MathJax !== 'undefined') MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+            /*if (typeof MathJax !== 'undefined') MathJax.Hub.Queue(["Typeset",MathJax.Hub]);*/
             // support google code prettify
             if (typeof prettyPrint !== 'undefined') prettyPrint();
             // support 百度统计

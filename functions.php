@@ -80,7 +80,7 @@ remove_filter( 'the_content_feed',  'wp_staticize_emoji');
 remove_filter( 'comment_text_rss',  'wp_staticize_emoji');
 remove_filter( 'wp_mail',    'wp_staticize_emoji_for_email');
 add_filter('login_errors', create_function('$a', "return null;")); //取消登录错误提示
-// add_filter( 'show_admin_bar', '__return_false' ); //删除AdminBar
+add_filter( 'show_admin_bar', '__return_false' ); //删除AdminBar
 if ( function_exists('add_theme_support') )add_theme_support('post-thumbnails'); //添加特色缩略图支持
 
 // 禁止wp-embed.min.js
@@ -136,6 +136,7 @@ function biji_add_theme_support_title(){
 add_action( 'after_setup_theme', 'biji_add_theme_support_title' );
 
 // 编辑器增强
+/*
 function enable_more_buttons($buttons) {
     $buttons[] = 'hr';
     $buttons[] = 'del';
@@ -151,6 +152,7 @@ function enable_more_buttons($buttons) {
     return $buttons;
 }
 add_filter("mce_buttons_3", "enable_more_buttons");
+*/
 
 // 代码高亮
 function dangopress_esc_html($content)
@@ -159,7 +161,7 @@ function dangopress_esc_html($content)
         $content = preg_replace('/<code(.*)>/i',"<code class=\"prettyprint\" \$1>",$content);
     }
     $regex = '/(<code.*?>)(.*?)(<\/code>)/sim';
-    return preg_replace_callback($regex, 'dangopress_esc_callback', $content);
+    return preg_replace_callback($regex, dangopress_esc_callback, $content);
 }
 function dangopress_esc_callback($matches)
 {
@@ -191,7 +193,7 @@ function comment_mail_notify($comment_id) {
     $parent_id = $comment->comment_parent ? $comment->comment_parent : '';
     $spam_confirmed = $comment->comment_approved;
     if (($parent_id != '') && ($spam_confirmed != 'spam')) {
-        $wp_email = 'no-reply@' . preg_replace('#^www.#', '', strtolower($_SERVER['SERVER_NAME'])); //e-mail 发出点, no-reply 可改为可用的 e-mail.
+        $wp_email = 'reply@' . preg_replace('#^www.#', '', strtolower($_SERVER['SERVER_NAME'])); //e-mail 发出点, no-reply 可改为可用的 e-mail.
         $to = trim(get_comment($parent_id)->comment_author_email);
         $subject = '您在 [' . get_option("blogname") . '] 的留言有了回复';
         $message = '
@@ -277,10 +279,52 @@ function biji_404_template( $template ){
         <meta name="robots" content="none" />
         <title>404 Not Found</title>
         <style>
-            *{font-family:"Microsoft Yahei";margin:0;font-weight:lighter;text-decoration:none;text-align:center;line-height:2.2em;}
+            *{font-family:"Microsoft Yahei";margin:0;font-weight:lighter;text-decoration:none;line-height:2.2em;}
             html,body{height:100%;}
             h1{font-size:100px;line-height:1em;}
             table{width:100%;height:100%;border:0;}
+		.myquote {
+			text-align: center;
+			padding: 30px 80px;
+			position: relative;
+			margin: 0;
+			border: none;
+			width: 400px;
+		}
+		.myquote::before, .myquote::after {
+			color: #000;
+			position: absolute;
+			content: "\201c";
+			font-size: 45px;
+			font-family: 'Georgia', serif;
+			display: block;
+			top: 13px;
+			left: 30px;
+		}
+		.myquote::after {
+			content: "\201d";
+			top: auto;
+			left: auto;
+			right: 30px;
+			bottom: -5px;
+		}
+		.myquote cite {
+			position: relative;
+			display: inline-block;
+			padding: 0 20px;
+			font-size: 14px;
+			margin-top: 20px;
+		}
+		.myquote cite::before {
+			content: "";
+			background-color: #363b40;
+			width: 10px;
+			height: 1px;
+			display: block;
+			position: absolute;
+			top: 10px;
+			left: 0;
+		}
         </style>
         <?php if(get_theme_mod('biji_setting_style')) echo "<div style=\"display:none\">".get_theme_mod('biji_setting_style')."</div>\n";?>
     </head>
@@ -290,11 +334,12 @@ function biji_404_template( $template ){
             <td>
                 <table cellspacing="0" cellpadding="0">
                     <tr>
-                        <td>
-                            <h1>404</h1>
-                            <h3>大事不妙啦！</h3>
-                            <p>你访问的页面好像不小心被博主给弄丢了~<br/><a href="<?php bloginfo('siteurl'); ?>">惩罚博主 ></a></p>
-                        </td>
+                        <td><center>
+							<h1>404</h1>
+							<div class="myquote"><p id="hitokoto">一言获取中...</p></div>
+							<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+							<a href="<?php bloginfo('siteurl'); ?>">返回首页 ></a>
+							</center></td>
                     </tr>
                 </table>
             </td>
@@ -342,6 +387,7 @@ add_action( 'wp_ajax_nopriv_comment-submission', 'biji_ajax_comment_submission' 
  * Licensed under the GNU GPL license.
  * http://www.gnu.org/licenses/gpl.html
  */
+/*
 if ( !class_exists('ThemeUpdateChecker') ):
 class ThemeUpdateChecker {
 	public $theme = '';
@@ -477,6 +523,23 @@ endif;
 $mytheme_update_checker = new ThemeUpdateChecker(
 	'adams',
 	'https://biji.io/update/adams.json'
-);
+);*/
+
+/**
+ * 实现使用短代码调用菜单
+ */
+function print_menu_shortcode($atts, $content = null) {
+	extract(shortcode_atts(array( 'name' => null, ), $atts));
+	return wp_nav_menu( array( 'menu' => $name, 'echo' => false ) );
+}
+add_shortcode('menu', 'print_menu_shortcode');
+
+/**
+ * 实现 Notice 框
+ */
+function nobx($atts, $content=null){   
+    return '<div class="notice_box">'.$content.'</div>';   
+}    
+add_shortcode('notice','nobx');   
 
 // 全部配置完毕
