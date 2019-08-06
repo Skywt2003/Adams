@@ -1,5 +1,6 @@
 a,.archives tr a, ul.link-items li a, .readerswall li a {color: #b38a60;}
 a:hover,.archives tr a:hover, ul.link-items li a:hover, .readerswall li a:hover { color: #704214;}
+blockquote, q{color: #939dab;}
 body,.post-list .meta header h2,.infos.fixed .fixed-title{background:#f3eacb;color: #704214;}
 ::-webkit-scrollbar-track-piece,.post-list .reade_more a,{background-color:#f3eacb;}
 ::-webkit-scrollbar-thumb{background:#704214;border:2px solid #f3eacb}

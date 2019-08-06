@@ -1,7 +1,7 @@
 (function ($) {
     
     $(document).ready(function(){
-        $('.infos .donate,.infos .share').unbind("click").click(function(){
+        $('.infos .donate,.infos .share').click(function(){
             if($(this).attr('class')=='donate'){
                 $('.infos').removeClass('share-close');
                 $('.infos').toggleClass('donate-close');
@@ -17,7 +17,7 @@
     
     $(".dot-good").click(function () {
         if ($(this).hasClass('done')) {
-            alert('点多了伤身体~');
+            //alert('点多了伤身体~');
             return false;
         } else {
             $(this).addClass('done');

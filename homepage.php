@@ -10,7 +10,8 @@ Template Name: Homepage
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <link href="<?php bloginfo('template_url'); ?>/style.css?<?php echo THEME_DB_VERSION;?>" type="text/css" rel="stylesheet">
-    <link href="<?php bloginfo('template_url'); ?>/static/caomei1.2.8/style.css?<?php echo THEME_DB_VERSION;?>" type="text/css" rel="stylesheet">
+    <!--<link href="<?#php bloginfo('template_url'); ?>/static/caomei1.2.8/style.css?<?#php echo THEME_DB_VERSION;?>" type="text/css" rel="stylesheet">-->
+    <link href="<?php bloginfo('template_url'); ?>/static/strawberry-v2.0.0/style.css?<?php echo THEME_DB_VERSION;?>" type="text/css" rel="stylesheet">
     <?php wp_head(); ?>
     
     <script>
@@ -65,7 +66,7 @@ body{font:400 16px/1.62 sans-serif;overflow:hidden}
 <body>
 <div class="willerce">
 	<div class="sydlogo">
-		<img class="avatar" src="<?php bloginfo( 'template_url' ); ?>/images/avatar.png" alt="" width="128" height="128">
+		<img class="avatar" src="<?php bloginfo( 'template_url' ); ?>/static/images/avatar.png" alt="" width="128" height="128">
 	</div>
 	<h1><?php bloginfo('name'); ?></h1>
 	<p style="height: 24px; line-height: 24px; margin-bottom: 25px;">

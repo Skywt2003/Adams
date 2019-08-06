@@ -1,7 +1,7 @@
-.post_article ol,.post_article ul,blockquote, q,code {background:rgba(255,255,255,.06);box-shadow:0 0 0 1px rgba(255,255,255,.1);}
-a,.archives tr a, ul.link-items li a, .readerswall li a {color: #666e8e;}
+a,.archives tr a, ul.link-items li a, .readerswall li a {color: #939dab;}
 a:hover,.archives tr a:hover, ul.link-items li a:hover, .readerswall li a:hover { color: #bdcadb;}
 body,.post-list .meta header h2,.infos.fixed .fixed-title{background:#1c1f2b;color: #bdcadb;}
+blockquote,q{color:#939dab;}
 ::-webkit-scrollbar-track-piece{background-color:#1c1f2b;}
 ::-webkit-scrollbar-thumb{background:#bdcadb;border:2px solid #1c1f2b}
 .header:after,.header .menu li:after,.footer .menu li:after,.alink hr{background:#393f56;}
