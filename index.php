@@ -6,6 +6,13 @@
             <div class="post-list">
                 <?php if (have_posts()) { while (have_posts()): the_post(); ?>
                 <article class="meta" itemscope="" itemtype="http://schema.org/BlogPosting">
+                    <?php if (get_the_title()=="") { ?> <!-- 如果无标题则不显示评论、缩略图、标题区域 -->
+                    <main>
+                        <div itemprop="articleBody">
+                            <?php the_content("Read more...") ?>
+                        </div>
+                    </main>
+                    <?php } else { ?>
                     <header>
                         <a href="<?php the_permalink(); ?>" itemprop="url"><h2 itemprop="name headline"><?php the_title(); ?></h2></a>
                     </header>
@@ -24,17 +31,14 @@
                         <span class="comments"><?php comments_number('0', '1', '%'); ?> 条评论</span>
                         <?php echo get_post_meta($post->ID, 'dotGood', true) ? '<span class="hr"></span><span class="likes">'.get_post_meta($post->ID, 'dotGood', true).' 人喜欢</span>' : ''; ?>
                     </footer>
+                    <?php } ?> <!-- !!!!! -->
                 </article>
-                
-                <?php if ($wp_query->current_post == 0) : ?>
-                <!-- ads -->
-                <?php endif; ?>
                 
                 <?php endwhile;
             } else { ?>
                 <article class="meta">
                     <h3 style="font-size: 3em;margin: 0 0 20px;color: #000;">Sorry!</h3>
-                    <p>这个页面没有你要找的内容。</p>
+                    <p>这个页面没有你要找的内容……</p>
                 </article>
             <?php }; ?>
                 <!--<nav class="reade_more">-->
