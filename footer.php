@@ -9,7 +9,7 @@
         );?>
         <p>
             <span class='left'><?php echo '&copy; '.date('Y').' <a href="'.get_bloginfo('url').'">'.get_bloginfo('name').'</a>';
-                 if(get_option('zh_cn_l10n_icp_num')) echo " . " . get_option('zh_cn_l10n_icp_num');?>
+                 if(get_option('zh_cn_l10n_icp_num')) echo ' / <a href="http://www.beian.miit.gov.cn/">'.get_option('zh_cn_l10n_icp_num')."</a>";?>
 			</span>
 			<span class='right'>Powered by <a href="https://wordpress.org" target="_blank">WordPress</a> / Theme by <a href="https://biji.io" target="_blank">Adams</a></span>
         </p>

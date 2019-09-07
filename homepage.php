@@ -93,6 +93,7 @@ body{font:400 16px/1.62 sans-serif;overflow:hidden}
             );
         ?>
     </header>
+	<?php  if(get_option('zh_cn_l10n_icp_num')) echo '<a href="http://www.beian.miit.gov.cn/">'.get_option('zh_cn_l10n_icp_num')."</a>"; ?>
 	
 <script>
 var _hmt = _hmt || [];
@@ -103,8 +104,6 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-
-	
     <script src="https://skywt.cn/lab/mousetrap.js"></script>
     <script>
         Mousetrap.bind('l a b enter', function(e) {
