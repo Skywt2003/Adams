@@ -72,7 +72,7 @@ body{font:400 16px/1.62 sans-serif;overflow:hidden}
 	<p style="height: 24px; line-height: 24px; margin-bottom: 25px;">
 		<span class="czs-location-l"></span> Hangzhou · China
 	</p>
-	<header class="header-homepage">
+	<header style="margin-bottom:15px;" class="header-homepage">
         <?php
             wp_nav_menu(
                 array(
@@ -93,7 +93,7 @@ body{font:400 16px/1.62 sans-serif;overflow:hidden}
             );
         ?>
     </header>
-	<?php  if(get_option('zh_cn_l10n_icp_num')) echo '<a href="http://www.beian.miit.gov.cn/">'.get_option('zh_cn_l10n_icp_num')."</a>"; ?>
+	<?php #if(get_option('zh_cn_l10n_icp_num')) echo '<a style="font-size:13px;" href="http://www.beian.miit.gov.cn/">'.get_option('zh_cn_l10n_icp_num')."</a>"; ?>
 	
 <script>
 var _hmt = _hmt || [];
@@ -104,14 +104,5 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-    <script src="https://skywt.cn/lab/mousetrap.js"></script>
-    <script>
-        Mousetrap.bind('l a b enter', function(e) {
-            window.open("https://skywt.cn/lab/")
-        });
-        Mousetrap.bind('a d m i n enter', function(e) {
-            window.open("https://skywt.cn/wp-admin/")
-        });
-    </script>
 </div>
 </body></html>

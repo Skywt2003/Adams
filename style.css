@@ -27,12 +27,14 @@ blockquote,q {
 	word-wrap:break-word;
 }
 blockquote p,q p{margin:0!important;padding:0;line-height:1.8rem;overflow:hidden;}
-pre{position:relative;white-space:pre-wrap;word-wrap:break-word;}
-pre code,code{display:block;overflow:auto;font-size:.88rem;padding:2rem;-webkit-overflow-scrolling:touch;overflow-scrolling:touch;line-height:2rem;background:#3C3B3D;}
-code{display:inline-block;margin:-.36rem 0;padding:0 .36rem;color:#AAB2BD;line-height:1.6rem;}
+/*pre{position:relative;white-space:pre-wrap;word-wrap:break-word;}*/
+/*pre code,code{display:block;overflow:auto;font-size:.88rem;padding:2rem;-webkit-overflow-scrolling:touch;overflow-scrolling:touch;line-height:2rem;background:rgb(245, 242, 240);}*/
+/*code{display:inline-block;margin:-.36rem 0;padding:0 .36rem;line-height:1.6rem;}*/
+code{font-family:monospace;padding:.20rem;background:rgb(245, 242, 240);}
+pre code{padding:0;}
 
 /*! Color themes for Google Code Prettify | MIT License | github.com/jmblog/color-themes-for-google-code-prettify */
-.prettyprint{font-family:Menlo,Bitstream Vera Sans Mono,DejaVu Sans Mono,Monaco,Consolas,monospace;border:0 !important;}
+/*.prettyprint{font-family:Menlo,Bitstream Vera Sans Mono,DejaVu Sans Mono,Monaco,Consolas,monospace;border:0 !important;}*/
 .pln{color:#8BC34A}
 ol.linenums{margin:0 !important;padding:0 !important;padding-left:40px !important;background:#F5F7FA !important;color:#AAB2BD}
 li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9{padding-left:1rem;background-color:#fff;list-style-type:decimal}
@@ -155,7 +157,7 @@ box-shadow:0 0 0 1px rgba(0, 0, 0, 0.2),
 .post_article embed {max-width:100%;margin:10px auto;display:block;}
 .post_article a {text-decoration: underline;}
 .post_article p {margin:4% 0;line-height:2.4rem;}
-.post_article p a,.post_article p a span{padding:0;color:#3274ff;}a
+.post_article p a,.post_article p a span{padding:0;color:#3274ff;}
 .post_article h1,.post_article h2,.post_article h3,.post_article h4,#comments{margin:2rem 0;font-weight:bold;position:relative;}
 .post_article h1 {font-size:1.8rem;line-height:1.8rem;}
 .post_article h2 {font-size:1.6rem;line-height:1.6rem;}
