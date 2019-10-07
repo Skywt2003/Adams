@@ -19,7 +19,8 @@ html{height:100%;}
 ol, ul { list-style: none; }
 input,textarea,button {outline:none;-webkit-appearance:none;}
 blockquote,q {
-	/*font-family:Georgia,"Times New Roman",Times,Kai,"Kaiti SC",KaiTi,BiauKai,FontAwesome,serif;*/
+    /* 引用就该用楷体（雾 */
+	font-family:Georgia,"Times New Roman",Times,Kai,"Kaiti SC",KaiTi,BiauKai,FontAwesome,serif;
 	color: rgba(0,0,0,.5);
 	padding-left:1.5em;
 	border-left:5px solid rgba(0,0,0,.1);
@@ -27,33 +28,35 @@ blockquote,q {
 	word-wrap:break-word;
 }
 blockquote p,q p{margin:0!important;padding:0;line-height:1.8rem;overflow:hidden;}
-/*pre{position:relative;white-space:pre-wrap;word-wrap:break-word;}*/
-/*pre code,code{display:block;overflow:auto;font-size:.88rem;padding:2rem;-webkit-overflow-scrolling:touch;overflow-scrolling:touch;line-height:2rem;background:rgb(245, 242, 240);}*/
+
+/* 改了多次的部分，还是不太顺眼 */
+/*pre{background: rgb(245, 242, 240);position:relative;white-space:pre-wrap;word-wrap:break-word;}*/
+pre{background: rgb(245, 242, 240);margin-bottom: 1.6em;overflow: auto;padding: 1.6em;}
+code{font-family:"Lucida Console", Monaco, monospace;padding:.20rem;background:rgb(245, 242, 240);line-height:1.6rem;}
+/*pre code{display:block;overflow:auto;font-size:.88rem;padding:1rem;-webkit-overflow-scrolling:touch;overflow-scrolling:touch;line-height:2rem;}*/
 /*code{display:inline-block;margin:-.36rem 0;padding:0 .36rem;line-height:1.6rem;}*/
-code{font-family:monospace;padding:.20rem;background:rgb(245, 242, 240);}
-pre code{padding:0;}
 
 /*! Color themes for Google Code Prettify | MIT License | github.com/jmblog/color-themes-for-google-code-prettify */
 /*.prettyprint{font-family:Menlo,Bitstream Vera Sans Mono,DejaVu Sans Mono,Monaco,Consolas,monospace;border:0 !important;}*/
-.pln{color:#8BC34A}
-ol.linenums{margin:0 !important;padding:0 !important;padding-left:40px !important;background:#F5F7FA !important;color:#AAB2BD}
-li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9{padding-left:1rem;background-color:#fff;list-style-type:decimal}
-@media screen{
-    .str{color:#f35561}
-    .kwd{color:#03A9F4}
-    .com{color:#AAB2BD}
-    .typ{color:#03A9F4}
-    .lit{color:#ac92ec}
-    .pun{color:#8BC34A}
-    .opn{color:#8BC34A}
-    .clo{color:#8BC34A}
-    .tag{color:#ed5565}
-    .atn{color:#CDDC39}
-    .atv{color:#f35561}
-    .dec{color:#ac92ec}
-    .var{color:#CCD1D9}
-    .fun{color:#CCD1D9}
-}
+/*.pln{color:#8BC34A}*/
+/*ol.linenums{margin:0 !important;padding:0 !important;padding-left:40px !important;background:#F5F7FA !important;color:#AAB2BD}*/
+/*li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9{padding-left:1rem;background-color:#fff;list-style-type:decimal}*/
+/*@media screen{*/
+/*    .str{color:#f35561}*/
+/*    .kwd{color:#03A9F4}*/
+/*    .com{color:#AAB2BD}*/
+/*    .typ{color:#03A9F4}*/
+/*    .lit{color:#ac92ec}*/
+/*    .pun{color:#8BC34A}*/
+/*    .opn{color:#8BC34A}*/
+/*    .clo{color:#8BC34A}*/
+/*    .tag{color:#ed5565}*/
+/*    .atn{color:#CDDC39}*/
+/*    .atv{color:#f35561}*/
+/*    .dec{color:#ac92ec}*/
+/*    .var{color:#CCD1D9}*/
+/*    .fun{color:#CCD1D9}*/
+/*}*/
 strong,b {font-weight:bold;}
 em,i {font-style:italic;}
 table {border-collapse:collapse;}
