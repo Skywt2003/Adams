@@ -7,7 +7,7 @@
                 <?php if (have_posts()) { while (have_posts()): the_post(); ?>
                 <article class="meta" itemscope="" itemtype="http://schema.org/BlogPosting">
                     <?php if (get_the_title()=="") { ?> <!-- 如果无标题则不显示评论、缩略图、标题区域 -->
-                    <main>
+                    <main style="margin-top:0">
                         <div itemprop="articleBody">
                             <?php the_content("Read more...") ?>
                         </div>
