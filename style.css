@@ -62,7 +62,8 @@ em,i {font-style:italic;}
 table {border-collapse:collapse;}
 a { color: inherit; text-decoration: none; }
 a:hover { color: #3274ff;}
-body { line-height: 1; background: #FFF; color:#656D78; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { /*line-height: 1;*/ background: #FFF; color:#656D78; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+/* body 的 line-height 搞成 1 导致表格里字都叠在一起啦 */
 
 ::-webkit-scrollbar {width: 8px;height: 8px;}
 ::-webkit-scrollbar-thumb {background: #656D78;}
@@ -166,8 +167,9 @@ box-shadow:0 0 0 1px rgba(0, 0, 0, 0.2),
 .post_article h2 {font-size:1.6rem;line-height:1.6rem;}
 .post_article h3 {font-size:1.4rem;line-height:1.4rem;}
 .post_article h4,#comments {font-size:1.2rem;line-height:1.2rem;}
-.post_article hr {border:0;display:block;margin: 5% 0;position:relative;text-align:center;letter-spacing: 2rem;}
-.post_article hr:before{content: '...';display: inline-block;position: relative;top: -.5rem;left:.8rem;font-size: 2rem;}
+/*.post_article hr {border:0;display:block;margin: 5% 0;position:relative;text-align:center;letter-spacing: 2rem;}*/
+/*.post_article hr:before{content: '...';display: inline-block;position: relative;top: -.5rem;left:.8rem;font-size: 2rem;}*/
+.post_article hr {border:none; display:block;margin: 5% 0;background-color:#e6e9ed; height:1px;}
 .post_article ol,.post_article ul {margin:10px 0;padding:10px 40px;line-height:38px;}
 .post_article ol li {list-style-type:decimal;}
 .post_article ul li {list-style-type:disc;}
@@ -431,4 +433,9 @@ animation-fill-mode: forwards;
     padding: 5px 15px;
     line-height: 2.4rem;
     background: #eee;
+}
+
+.heavy-noto-serif{
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
 }

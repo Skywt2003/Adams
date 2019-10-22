@@ -6,6 +6,7 @@
     <link href="<?php bloginfo('template_url'); ?>/style.css?<?php echo THEME_DB_VERSION;?>" type="text/css" rel="stylesheet">
     <!--<link href="<?#php bloginfo('template_url'); ?>/static/caomei1.2.8/style.css?<?#php echo THEME_DB_VERSION;?>" type="text/css" rel="stylesheet">-->
     <link href="<?php bloginfo('template_url'); ?>/static/strawberry-v2.0.0/style.css?<?php echo THEME_DB_VERSION;?>" type="text/css" rel="stylesheet">
+    <link href="https://fonts.loli.net/css?family=Noto+Serif+SC:900&display=swap&subset=chinese-simplified" rel="stylesheet">
     <?php wp_head(); ?>
     
     <script>

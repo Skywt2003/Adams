@@ -30,9 +30,10 @@ get_header(); ?>
                     <td><a href="<?php the_permalink(); ?>"><?php the_title(); ?> - <?php comments_number('0', '1', '%'); ?></a></td>
                 </tr>
             <?php 
-                endforeach;
-                echo '</table>';
+            endforeach;
+            echo '</table>';
             ?>
+        </article>
     </div>
 </section>
 <?php get_footer(); ?>

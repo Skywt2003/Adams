@@ -16,6 +16,8 @@
 		<span class='right'>
 			<script type="text/javascript" src="//ra.revolvermaps.com/0/0/3.js?i=06imda552rb&amp;b=0&amp;s=22&amp;m=0&amp;cl=ffffff&amp;co=010020&amp;cd=aa0000&amp;v0=60&amp;v1=60&amp;r=1" async="async"></script>
 		</span>
+		<script src="https://skywt.cn/zemin/" defer></script>
+		<center><p id="zemin" class="heavy-noto-serif">zemin 获取中...</p></center>
 	</section>
 </footer>
 
