@@ -2,6 +2,9 @@
 
 WordPress theme
 
+从 2019 年 11 月 15 日起，我正式弃用 WordPress 转 Typecho 了，所以这个项目不会再更新了。
+WordPress，再见啦。
+
 在原作基础上略微做了点魔改
 
 ## 页面模板改动
