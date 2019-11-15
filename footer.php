@@ -7,17 +7,20 @@
                 'depth' => 0
             )
         );?>
-        <p>
-            <span class='left'><?php echo '&copy; '.date('Y').' <a href="'.get_bloginfo('url').'">'.get_bloginfo('name').'</a>';
-                 if(get_option('zh_cn_l10n_icp_num')) echo ' / <a href="http://www.beian.miit.gov.cn/">'.get_option('zh_cn_l10n_icp_num')."</a>";?>
-			</span>
-			<span class='right'>Powered by <a href="https://wordpress.org" target="_blank">WordPress</a> / Theme by <a href="https://biji.io" target="_blank">Adams</a></span>
-        </p>
-		<span class='right'>
-			<script type="text/javascript" src="//ra.revolvermaps.com/0/0/3.js?i=06imda552rb&amp;b=0&amp;s=22&amp;m=0&amp;cl=ffffff&amp;co=010020&amp;cd=aa0000&amp;v0=60&amp;v1=60&amp;r=1" async="async"></script>
+        <span class='left'><?php echo '&copy; '.date('Y').' <a href="'.get_bloginfo('url').'">'.get_bloginfo('name').'</a>';
+            if(get_option('zh_cn_l10n_icp_num')) echo ' / <a href="http://www.beian.miit.gov.cn/">'.get_option('zh_cn_l10n_icp_num')."</a>";?>
 		</span>
-		<script src="https://skywt.cn/zemin/" defer></script>
-		<center><p id="zemin" class="heavy-noto-serif">zemin 获取中...</p></center>
+		<span class='right'>Powered by <a href="https://wordpress.org" target="_blank">WordPress</a> / Theme by <a href="https://biji.io" target="_blank">Adams</a></span>
+        <br>
+		<span class='right'><script type="text/javascript" src="//ra.revolvermaps.com/0/0/3.js?i=06imda552rb&amp;b=0&amp;s=22&amp;m=0&amp;cl=ffffff&amp;co=010020&amp;cd=aa0000&amp;v0=60&amp;v1=60&amp;r=1" async="async"></script></span>
+		<script src="https://skywt.cn/zemin/?encode=js" defer></script>
+		<span id="zemin" class="left heavy-noto-serif" onclick="go_zemin()">长者语录 获取中...</span>
+		<script>
+		function go_zemin(){
+	        var r=confirm("你想搞个大新闻吗？\nDo you want to make a BIG NEWS?");
+	        if (r==true) window.open("http://www.m4.cn/opinion/wb/2017-10/1333864.shtml");
+        }
+		</script>
 	</section>
 </footer>
 
